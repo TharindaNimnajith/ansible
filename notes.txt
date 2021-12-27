@@ -1,0 +1,42 @@
+Ansible is a task execution engine that targets both the local system and remote systems.
+
+Benefits - Simple
+         - Easy to use
+         - Easy to learn
+         - Written in Python
+         - Flexible
+         - Automation (Manual server management by siloed server admins before Ansible existed)
+         - Free and open-source
+         - Original goals
+             - Clear
+             - Fast
+             - Complete
+             - Efficient
+             - Secure
+         - Human audits (Playbooks [YAML] and Inventory logs are human readable files)
+         - Scalable (Small to large environments)
+         - Extensibility (Leverage modules for straightforward functionality)
+         - Plugins to give additional capability
+         - Dynamic inventories
+         - Agentless (Clientless [SSH] architecture, No need to go to the remote systems and install client software to control them)
+
+When running Ansible on a system to control other systems, the local system is known as the "Control Node".
+
+"Role" is a downloadable component that can be installed and executed in the Ansible system/environment which is needed for automation and orchestrations.
+Role is a way to package everything up that would be needed and distribute it and then plug it right in to Ansible.
+
+Fleet Management - Managing all Ansible systems with a GUI [Red Hat Ansible Tower (Commercial), AWX (Free and open-source)]
+Red Hat Ansible Consulting - Assistance with enterprise implementation
+
+
+sudo pip3 install ansible
+
+ansible --version
+
+ansible myservers -m ping
+ansible localhost -m ping
+
+vim ansible.cfg
+
+vim sample.yml
+ansible-playbook sample.yml
