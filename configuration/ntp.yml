@@ -1,9 +1,10 @@
 ---
-- hosts: all
+- name: "NTP configuration"
+  hosts: all
   become: yes
-  name: "NTP configuration"
 
   tasks:
+
     - name: "Ensure NTP is installed"
       apt:
         name:
