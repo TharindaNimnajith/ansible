@@ -35,20 +35,15 @@ Red Hat Ansible Consulting - Assistance with enterprise implementation
 
 Usages - Remote management
          Automation and orchestration
+            - Automation refers to a single task
+            - Orchestration refers to the management of many automated tasks (Often a complicated ordering with dependencies)
          System configuration management
          React to configuration changes
          Infrastructure management
+            - Build infrastructure from the ground up
+            - Manage physical infrastructure
+            - Automate virtualization
+            - Wide operating system support
          Repeating tasks across fleets
-
-
-sudo pip3 install ansible
-
-ansible --version
-
-ansible myservers -m ping
-ansible localhost -m ping
-
-vim ansible.cfg
-
-vim sample.yml
-ansible-playbook sample.yml
+            - Running ad-hoc tasks (No playbook is needed)
+            - Strategies and Forks

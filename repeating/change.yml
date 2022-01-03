@@ -1,0 +1,29 @@
+---
+- name: "React with Change Example"
+  hosts: webservers
+  strategy: free
+
+  tasks:
+
+    - name: "Install nginx"
+      debug:
+        msg: "Install nginx on: {{ inventory_hostname }}"
+
+    - name: "Upgrade nginx"
+      debug:
+        msg: "Upgrade nginx on: {{ inventory_hostname }}"
+
+    - name: "Configure nginx"
+      debug:
+        msg: "Start {{ inventory_hostname }}"
+      notify: restart nginx
+      changed_when: True
+
+    - name: "Verify nginx"
+      debug:
+        msg: "Verify: {{ inventory_hostname }}"
+
+    handlers:
+      - name: restart nginx
+        debug:
+          msg: "CALLED HANDLER FOR RESTART"

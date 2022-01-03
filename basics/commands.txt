@@ -1,0 +1,16 @@
+sudo pip3 install ansible
+ansible --version
+
+ansible myservers -m ping
+ansible localhost -m ping
+
+vim ansible.cfg
+vim sample.yml
+ansible-playbook sample.yml
+
+
+ansible localhost -m find "paths=Downloads file_type=file"
+ansible all -m ping -i myhosts
+
+ansible-playbook first.yml
+ansible-playbook first.yml -v

@@ -1,4 +1,0 @@
-ansible localhost -m find "paths=Downloads file_type=file"
-
-ansible-playbook first.yml
-ansible-playbook first.yml -v
