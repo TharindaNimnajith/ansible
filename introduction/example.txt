@@ -1,0 +1,14 @@
+[southeast]
+localhost				ansible_connection=local
+other1.example.com		ansible_connection=ssh			ansible_user=ubuntu
+
+[northeast]
+other2.example.com
+10.10.100.10
+
+[southwest]
+10.10.200.10
+
+[east:children]
+southeast
+northeast

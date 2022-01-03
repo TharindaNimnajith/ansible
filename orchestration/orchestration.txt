@@ -1,0 +1,6 @@
+Automation and Orchestration
+
+Automation reers to a single task.
+
+Orchestration refers to the management of many automated tasks.
+Often a complicated ordering with dependencies.
